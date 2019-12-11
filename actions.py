@@ -73,7 +73,7 @@ class RestaurantForm(FormAction):
 		location=tracker.get_slot('location')
 		cost_check=cost_dict[cost]
 
-		config={ "user_key":"6c6e45db23a726185f67ab93e365b10b"}
+		config={ "user_key":"zomato_api_key"}
 		zomato = zomatopy.initialize_app(config)
 
 		location_detail=zomato.get_location(location, 1)
