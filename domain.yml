@@ -1,0 +1,127 @@
+actions:
+- utter_ask_cost
+- utter_ask_cuisine
+- utter_ask_email
+- utter_ask_feeling
+- utter_ask_location
+- utter_bot
+- utter_celeb
+- utter_console
+- utter_default
+- utter_email_req
+- utter_feeling
+- utter_goodbye
+- utter_greet
+- utter_purpose
+- utter_slot_values
+- utter_success
+- utter_unable
+- utter_wrong_cuisine
+- utter_wrong_email
+- utter_wrong_location
+entities:
+- cost
+- cuisine
+- email
+- location
+forms:
+- email_form
+- restaurant_form
+intents:
+- mood_great
+- greet
+- restaurant_search
+- affirm
+- feeling
+- mail_id
+- goodbye
+- purpose
+- deny
+- bot_challenge
+- other_task
+- mood_unhappy
+slots:
+  cost:
+    auto_fill: false
+    type: unfeaturized
+  cuisine:
+    auto_fill: false
+    type: unfeaturized
+  email:
+    auto_fill: false
+    type: unfeaturized
+  location:
+    auto_fill: false
+    type: unfeaturized
+  requested_slot:
+    type: unfeaturized
+templates:
+  utter_ask_cost:
+  - buttons:
+    - payload: less than 300
+      title: Less than 300
+    - payload: 300 to 700
+      title: Between 300 and 700
+    - payload: more than 700
+      title: More than 700
+    text: How must the average cost should be?
+  utter_ask_cuisine:
+  - buttons:
+    - payload: Chinese
+      title: Chinese
+    - payload: Italian
+      title: Italian
+    - payload: South Indian
+      title: South Indian
+    - payload: North Indian
+      title: North Indian
+    - payload: American
+      title: American
+    - payload: Mexican
+      title: Mexican
+    text: what kind of cuisine would you like?
+  utter_ask_email:
+  - text: Please provide your email id?
+  utter_ask_feeling:
+  - text: How are you feeling?
+  utter_ask_location:
+  - text: In which location?
+  utter_bot:
+  - text: I am Chatbot created by Lakshmi Narayan and Prathap
+  utter_celeb:
+  - text: That's Great,Why don't you celebrate it with food.
+  utter_console:
+  - text: Why don't you cheer yourself with some food?
+  utter_default:
+  - text: sorry, I didn't understand you, please try input something else
+  utter_email_req:
+  - text: Do you want me to email you the list?
+  utter_feeling:
+  - text: I am bot , I can't feel anything.
+  utter_goodbye:
+  - text: Bye
+  - text: goodbye
+  utter_greet:
+  - text: Hey! How can I help you?
+  - text: Hello! How can I help you?
+  - text: Hola! How can I help you?
+  - text: Namaste! What can do I for you?
+  utter_purpose:
+  - text: I am chatbot who can help you find restaurants
+  utter_slot_values:
+  - text: "I am going to run a restaurant search using the following parameters:\n\
+      \ - cuisine: {cuisine}\n - location: {location}\n - cost: {cost}\n "
+  utter_submit:
+  - text: All Done
+  utter_success:
+  - text: Email has been sent successfully
+  - text: I have sent you the email :-)
+  utter_unable:
+  - text: I am sorry,I can't help you with that, I can only find you restaurants
+  utter_wrong_cuisine:
+  - text: cuisine type is not in the database, please try different cuisine
+  utter_wrong_email:
+  - text: Email Id you provide is invalid,please try again.
+  utter_wrong_location:
+  - text: Sorry,We are currently not available in this location,please try different
+      location.
